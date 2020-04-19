@@ -18,11 +18,14 @@ def le():
         
 
 def insert():
+    # os ids foram definidos no codigo react, poderia ser utilizados classes ou tags
     id_e = 'english'
     id_p = 'portuguese'
     id_d = 'description'
     id_s = 'syno'
     id_b = 'btn_e'
+    
+    # conecta com a pagina
     driver.get('http://localhost:3000/cadastro')
     input_e = driver.find_element_by_id(id_e)
     input_p = driver.find_element_by_id(id_p)
@@ -30,6 +33,7 @@ def insert():
     input_s = driver.find_element_by_id(id_s)
     input_b = driver.find_element_by_id(id_b)
     
+    # pega as linhas do arquivo, e separa e envia o dado
     for item in palavras:
         dados = []
         dados = item.split(';')
